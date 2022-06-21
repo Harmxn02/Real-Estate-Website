@@ -8,7 +8,7 @@ function init() {
 function generateHouses() {
     let houses = [];
 
-    for (let id = 1; id <= 1; id++) {
+    for (let id = 1; id <= 3; id++) {
         let address = faker.address.streetAddress();
         let city_state = `${faker.address.city()}, ${faker.address.stateAbbr()}`
         let zipcode = faker.address.zipCode();
@@ -39,18 +39,32 @@ function generateHouses() {
         });
     }
 
-    houses.forEach(displayHouses);
+    displayHouses(houses)
 };
 
 function displayHouses(data) {
     console.log(data);
 
-    let data_address = data.address;
-    let data_city_state = data.city_state;
-    let data_zipcode = data.zipcode;
-    let data_email = data.email;
-    let data_phone = data.phone;
-    let data_price = data.price;
-    let data_bedrooms = data.bedrooms;
-    let data_bathrooms = data.bathrooms;
+    $allHouses = document.querySelector("#all-houses");
+
+    data.forEach(data => {        
+        const html = `
+                <article id="house-container">
+                    <div id="house-image">Nu nog niets</div>
+                    <div id="information-container">
+                        <h1 id="address">${data.address}</h1>
+                        <p id="location">${data.city_state}</p>
+                        <p id="price">${data.price}</p>
+                        <div id="rooms-container">
+                        <p id="bedrooms">${data.bedrooms}</p> 
+                        <p id="bathrooms">${data.bathrooms}</p> 
+                        </div>
+                    </div>
+                </article>
+                      
+                      
+                      `;
+        
+        $allHouses.insertAdjacentHTML("beforeend", html);
+    });
 }
