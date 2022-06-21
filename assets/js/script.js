@@ -8,7 +8,7 @@ function init() {
 function generateHouses() {
     let houses = [];
 
-    for (let id = 1; id <= 5; id++) {
+    for (let id = 1; id <= 1; id++) {
         let address = faker.address.streetAddress();
         let city_state = `${faker.address.city()}, ${faker.address.stateAbbr()}`
         let zipcode = faker.address.zipCode();
@@ -43,7 +43,7 @@ function generateHouses() {
 };
 
 function displayHouses(data) {
-    // console.log(data);
+    console.log(data);
 
     let data_address = data.address;
     let data_city_state = data.city_state;
