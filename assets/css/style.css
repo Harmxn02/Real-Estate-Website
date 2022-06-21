@@ -46,7 +46,13 @@ html {
     padding: 1em;
     border-radius: 1em;
     font-weight: bold;
+
+    transition: transform 250ms ease-in-out;
     
+}
+
+#all-houses-button:hover {
+    transform: scale(1.05);
 }
 
 
@@ -115,5 +121,8 @@ html {
     width: 6em;
 
     background-color: black;
+    background-image: url("../images/house.jpg");
+    background-size: cover;
+    background-position: center center;
 
 }
