@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'JetBrains Mono', monospace; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+#intro {
+    color: rgb(255, 255, 255);
+    
+    min-height: 100vh;
+    
+    background: rgba(0, 0, 0, 0.7) url('../images/house.jpg');
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#intro #title {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+#intro #description {
+    font-size: 2rem;
+}
+
+#all-houses-button {
+    margin-top: 4em;
+    text-decoration: none;
+    color: rgb(45, 45, 45);
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    font-weight: bold;
+    
+}
+
+
 #house-container {
     box-shadow: 0 15px 30px 1px grey;
     background-color: rgba(255, 255, 255, 0.9);
